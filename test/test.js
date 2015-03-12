@@ -17,6 +17,6 @@ assert.doesNotThrow(function() {
 assert.strictEqual(mconfig('no_this_config.js', 'param'), undefined, 'no value return undefined');
 assert.strictEqual(config('param'), undefined, 'no value return undefined2');
 
-var allconfig = mconfig('.log.conf.js', null);
-assert.equal(allconfig.LOG_PATH, '/log/error/', 'read all config by null param');
+assert.equal(mconfig('.log.conf.js', null).LOG_PATH, '/log/error/', 'read all config by null param');
+assert.equal(config(null).LOG_PATH, '/log/error/', 'read all config by null param2');
 

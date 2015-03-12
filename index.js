@@ -16,8 +16,10 @@ function readConfig(filename, param) {
 		var opts = require(file);
 
 		if (arguments.length < 2) {
-			return function(param) {return opts[param]};
-		} else if (param == null) {
+			return function(param) {
+				return param === null ? opts : opts[param];
+			};
+		} else if (param === null) {
 			return opts;
 		} else {
 			return opts[param];
