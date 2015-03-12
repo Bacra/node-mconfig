@@ -16,15 +16,16 @@ $ npm install mconfig
 $ mkdir config
 $ vi config/.log.conf.js
 
-{
-	LOG_PATH: '/log/error/'
+module.exports = {
+	LOG_PATH: '/log/error/',
 	LOG_PATH2: '/log/warn/'
 }
+
 
 $ vi config/default.json
 
 {
-	"LOG_PATH3": '/log/nolog/'
+	"LOG_PATH3": "/log/nolog/"
 }
 ```
 

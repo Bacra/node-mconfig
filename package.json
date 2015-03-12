@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Simple to read config file for modules",
   "main": "index.js",
+  "script": {
+    "test": "node test/test"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/Bacra/node-mconfig.git"
