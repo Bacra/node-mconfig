@@ -1,0 +1,24 @@
+{
+  "name": "mconfig",
+  "version": "1.0.0",
+  "description": "Simple to read config file for modules",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Bacra/node-mconfig.git"
+  },
+  "keywords": [
+    "node",
+    "config",
+    "modules"
+  ],
+  "author": "Bacra Woo <Bacra.Woo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bacra/node-mconfig/issues"
+  },
+  "homepage": "https://github.com/Bacra/node-mconfig",
+  "dependencies": {
+    "debug": "^2.1.0"
+  }
+}
