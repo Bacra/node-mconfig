@@ -42,3 +42,10 @@ This can be overridden by running application width `mconfig_cwd` argv or settin
 	node app.js --mconfig_cwd=/home/user/etc/node_config/
 
 Of course, you can also set mconfig module `cwd` variable to change the directory.
+
+
+## Difference from config
+This is similar to [config](https://www.npmjs.com/package/config) but adds features.
+
+Multiple profiles helps to reduce the inter-dependence. This is useful for function profile.
+

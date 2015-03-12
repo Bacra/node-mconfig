@@ -1,6 +1,6 @@
 {
   "name": "mconfig",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple to read config file for modules",
   "main": "index.js",
   "repository": {
