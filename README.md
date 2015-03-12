@@ -18,6 +18,10 @@ Simple to read config file for modules
 		LOG_PATH: '/log/error/'
 		LOG_PATH2: '/log/warn/'
 	}
+	$ vi config/default.json
+	{
+		"LOG_PATH3": '/log/nolog/'
+	}
 
 Read config file by MConfig
 
@@ -27,8 +31,14 @@ Read config file by MConfig
 
 	console.log(mconfig('.log.conf.js', 'LOG_PATH2'));		// print '/log/warn/'
 
+	console.log(mconfig.default('LOG_PATH3'));				// print '/log/nolog/'
+
 ## Notice
 
 MConfig reads configuration files in the `./config` directory for the running process.
+
 This can be overridden by running application width `mconfig_cwd` argv or setting the `$NODE_CONFIG_DIR` environment variable.
+
+	node app.js --mconfig_cwd=/home/user/etc/node_config/
+
 Of course, you can also set mconfig module `cwd` variable to change the directory.

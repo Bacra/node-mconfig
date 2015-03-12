@@ -30,6 +30,9 @@ function readConfig(filename, param) {
 }
 
 exports = module.exports = readConfig;
+exports.default = function(param) {
+	return readConfig('default', param);
+};
 
 // set cwd
 (function() {
