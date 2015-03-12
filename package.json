@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/Bacra/node-mconfig",
   "dependencies": {
-    "debug": "^2.1.0"
+    "debug": "*"
   }
 }
