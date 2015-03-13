@@ -2,9 +2,9 @@
   "name": "mconfig",
   "version": "1.1.0",
   "description": "Simple to read config file for modules",
-  "main": "index.js",
-  "script": {
-    "test": "node test/test"
+  "main": "lib/node.js",
+  "scripts": {
+    "test": "node test/test --mconfig_cwd=../test/config"
   },
   "repository": {
     "type": "git",

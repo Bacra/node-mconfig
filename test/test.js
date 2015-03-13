@@ -1,7 +1,7 @@
 require('debug').enable('*');
 
 var assert = require('assert');
-var mconfig = require('../index');
+var mconfig = require('../');
 
 // assert.equal(mconfig.cwd, __dirname + process.sed + 'config');
 var config = mconfig('.log.conf.js');
