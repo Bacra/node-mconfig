@@ -1,0 +1,20 @@
+{
+  "name": "mconfig",
+  "description": "Simple to read config file for modules",
+  "version": "1.1.0",
+  "keywords": ["config"],
+  "main": "dist/mconfig.js",
+  "scripts": ["dist/*"],
+  "ignore": [
+    "src",
+    "lib",
+    "test",
+    "Gruntfile.js",
+    "package.json",
+    "node_modules",
+    ".gitignore",
+    ".npmignore",
+    ".travis.yml"
+  ],
+  "license": "MIT"
+}
