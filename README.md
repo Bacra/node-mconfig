@@ -22,7 +22,7 @@ module.exports = {
 }
 
 
-$ vi config/default.json
+$ vi config/.mconfig_conf.json
 
 {
 	"LOG_PATH3": "/log/nolog/"
