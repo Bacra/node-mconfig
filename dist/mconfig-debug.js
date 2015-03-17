@@ -23,12 +23,12 @@ function get(filename, param) {
 
 		if (arguments.length < 2) {
 			return function(param) {
-				return param === null ? opts : opts[param];
+				return param === null ? opts : (opts && opts[param]);
 			};
 		} else if (param === null) {
 			return opts;
 		} else {
-			return opts[param];
+			return opts && opts[param];
 		}
 
 	} catch(e) {
@@ -39,7 +39,7 @@ function get(filename, param) {
 
 exports = module.exports = get;
 exports.default = function(param) {
-	return get('default', param);
+	return get('.mconfig_conf', param);
 };
 exports.read = function(filename) {
 	return require(filename);
