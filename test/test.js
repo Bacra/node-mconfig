@@ -1,4 +1,4 @@
-require('debug').enable('*');
+// require('debug').enable('*');
 
 var assert = require('assert');
 var mconfig = require('../');
