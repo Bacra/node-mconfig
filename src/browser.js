@@ -18,8 +18,9 @@ exports.read = function(filename) {
  * 
  * @param {String} filename
  */
+var extnameReg = /\.(js|node|json)$/i;
 exports.normalize = function(filename) {
-	return (''+filename).replace(/\.(js|node|json)$/i, '');
+	return (''+filename).replace(extnameReg, '');
 };
 
 exports.insert = function(filename, data) {
