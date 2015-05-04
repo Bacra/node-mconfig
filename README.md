@@ -22,9 +22,9 @@ module.exports = {
 }
 
 
-$ vi config/.my_conf.json
+$ vi config/my.defaults.conf.js
 
-{
+module.exports = {
 	"LOG_PATH3": "/log/nolog/"
 }
 ```
