@@ -8,7 +8,7 @@ var config = mconfig('.log.conf.js');
 assert.equal(config('LOG_PATH'), '/log/error/', 'read by step');
 
 assert.equal(mconfig('.log.conf.js', 'LOG_PATH2'), '/log/warn/', 'read directly');
-assert.equal(mconfig.default('LOG_PATH3'), '/log/nolog/', 'read by default method');
+assert.equal(mconfig.defaults('LOG_PATH3'), '/log/nolog/', 'read by default method');
 assert.equal(config('LOG_PATH3'), '/log/nolog/', 'read default by merge method');
 
 assert.doesNotThrow(function() {

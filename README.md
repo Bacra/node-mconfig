@@ -38,7 +38,7 @@ console.log(config('LOG_PATH'));						// print '/log/error/'
 
 console.log(mconfig('.log.conf.js', 'LOG_PATH2'));		// print '/log/warn/'
 
-console.log(mconfig.default('LOG_PATH3'));				// print '/log/nolog/'
+console.log(mconfig.defaults('LOG_PATH3'));				// print '/log/nolog/'
 ```
 
 ## Notice
