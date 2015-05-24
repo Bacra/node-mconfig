@@ -1,7 +1,7 @@
 MConfig  [![Build Status](https://travis-ci.org/Bacra/node-mconfig.svg?branch=master)](https://travis-ci.org/Bacra/node-mconfig)
 ==================
 
-Simple to read config file for modules
+Simple to read config file for modules. Support mulit cwd.
 
 
 ## Installation
