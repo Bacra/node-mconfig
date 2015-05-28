@@ -37,3 +37,11 @@ assert.equal(onlyConfig('LOG_PATH3'), undefined, 'only config to read default');
 
 // multi config
 assert.equal(config('LOG_PATH5'), '/log/debug/', 'multi config');
+
+
+// NODE_CONFIG_DIR
+assert.equal(mconfig('log.conf.js', 'LOG_PATH6'), undefined, 'no use NODE_CONFIG_DIR');
+delete require.cache[require.resolve('../')];
+process.env.NODE_CONFIG_DIR = './test/config3';
+mconfig = require('../');
+assert.equal(mconfig('log.conf.js', 'LOG_PATH6'), '/log/debug/', 'use NODE_CONFIG_DIR');
