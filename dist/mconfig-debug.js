@@ -11,8 +11,10 @@ var module = {};
 function noop(){}
 
 function extend(obj, copy) {
+	if (!copy || !obj) return obj;
+
 	for(var i in copy) {
-		if (copy.hasOwnProperty(i) && !obj.hasOwnProperty(i)) {
+		if (copy.hasOwnProperty(i)) {
 			obj[i] = copy[i];
 		}
 	}
@@ -29,32 +31,20 @@ function extend(obj, copy) {
  * @param  {Number}        argsLen   method arguments length
  * @return {Mix/Function}
  */
-function get(filename, param, defaults, argsLen) {
-	var opts;
-	try {
-		opts = exports.read(filename);
-	} catch(e) {
-		exports.debug('read config err <%s>, %o', filename, e.stack || e.message);
-	}
-
-	if (defaults) {
-		if (opts) {
-			// protect the original data
-			opts = exports.extend(exports.extend({}, opts), defaults);
-		} else {
-			opts = exports.extend({}, defaults);
-		}
-	}
+function _get(filename, param, defaults, argsLen) {
+	var opts = exports.extend({}, defaults);
+	var extOpts = exports.read(filename);
+	if (extOpts) exports.extend(opts, extOpts);
 
 	function _getone(param) {
-		return param === null ? opts && exports.extend({}, opts) : (opts && opts[param]);
+		return param === null ? opts : (opts && opts[param]);
 	}
 
 	return argsLen < 2 ? _getone : _getone(param);
 }
 
 function merge(filename, param) {
-	return get(filename, param, exports.defaults(null), arguments.length);
+	return _get(filename, param, exports.defaults(null), arguments.length);
 }
 
 exports = module.exports = merge;
@@ -62,10 +52,10 @@ exports.read = function(filename) {
 	return require(filename);
 };
 exports.defaults = function(param) {
-	return get('my.defaults.conf.js', param, null, 2);
+	return _get('my.defaults.conf.js', param, null, 2);
 };
 exports.only = function(filename, param, defaults) {
-	return get(filename, param, defaults, arguments.length);
+	return _get(filename, param, defaults, arguments.length);
 };
 
 exports.debug = noop;

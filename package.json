@@ -1,10 +1,10 @@
 {
   "name": "mconfig",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "description": "Simple to read config file for modules",
   "main": "lib/node.js",
   "scripts": {
-    "test": "node test/test --mconfig-cwd=./test/config2 --mconfig-cwd=./test/config --mconfig-debug"
+    "test": "node test/test --mconfig-cwd=./test/config2 --mconfig-cwd=./test/config"
   },
   "repository": {
     "type": "git",
