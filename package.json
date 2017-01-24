@@ -1,6 +1,6 @@
 {
   "name": "mconfig",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Simple to read config file for modules",
   "main": "lib/node.js",
   "scripts": {

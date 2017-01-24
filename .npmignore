@@ -3,6 +3,5 @@ npm-debug.log
 .npmignore
 .travis.yml
 src
-dist
 Gruntfile.js
 component.json
