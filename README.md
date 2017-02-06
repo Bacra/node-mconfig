@@ -45,13 +45,13 @@ console.log(mconfig.defaults('LOG_PATH3'));				// print '/log/nolog/'
 
 MConfig reads configuration files in the `./config` directory for the running process.
 
-This can be overridden by running application width `mconfig_cwd` argv or setting the `$NODE_CONFIG_DIR` environment variable.
+This can be overridden by running application width `mconfig-dir` argv or setting the `$NODE_CONFIG_DIR` environment variable.
 
 ```
-node app.js --mconfig_cwd=/home/user/etc/node_config/
+node app.js --mconfig-dir=/home/user/etc/node_config/ --no-mconfig-here
 ```
 
-Of course, you can also set mconfig module `cwd` variable to change the directory.
+Of course, you can also set mconfig module `cwds` variable to change the directory.
 
 
 ## Difference from config
